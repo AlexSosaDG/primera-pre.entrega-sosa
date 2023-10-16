@@ -7,7 +7,7 @@ function concatenarComidasRapi(listaRapida) {
     nombreComida += listaRapida;
 }
 
-function concatenarComidasEla(listaElaborada) {
+function concatenarComidasElaborada(listaElaborada) {
     if (nombreComida !== "") {
         nombreComida += ", ";
     }
@@ -18,7 +18,7 @@ function concatenarComidasEla(listaElaborada) {
 
 function algoRapido() {
 
-    let listaRapida = prompt("Quiere: 1-Sanguche de milanesa 2-Empanadas 0-volver")
+    let listaRapida = prompt("Quiere: 1-Sanguche de milanesa 2-Empanadas 0-Volver al inicio")
 
     while (listaRapida !== "0") {
         switch (listaRapida) {
@@ -36,32 +36,32 @@ function algoRapido() {
                 alert("INGRESASTE UNA OPCIÓN INCORRECTA");
                 break;
         }
-        listaRapida = prompt("¿Quiere agregar algo más? 1-Sanguche de milanesa 2-Empanadas 0-Salir");
+        listaRapida = prompt("¿Quiere agregar algo más? 1-Sanguche de milanesa 2-Empanadas 0-Volver al inicio");
     }
 }
 
 function algoElaborado() {
-    let listaElaborada = prompt("Quiere: 1-Ravioles con Tuco 2-Pastel de Papa 3-Napolitana con guarnición 4-Tarta de jamón y queso 0-Volver");
+    let listaElaborada = prompt("Quiere: 1-Ravioles con Tuco 2-Pastel de Papa 3-Napolitana con guarnición 4-Tarta de jamón y queso 0-Volver al inicio");
 
     while (listaElaborada !== "0") {
         switch (listaElaborada) {
             case "1":
-                concatenarComidasEla(listaElaborada);
+                concatenarComidasElaborada(listaElaborada);
                 total += 1500;
                 break;
 
             case "2":
-                concatenarComidasEla(listaElaborada);
+                concatenarComidasElaborada(listaElaborada);
                 total += 1500;
                 break;
 
             case "3":
-                concatenarComidasEla(listaElaborada);
+                concatenarComidasElaborada(listaElaborada);
                 total += 2100;
                 break;
 
             case "4":
-                concatenarComidasEla(listaElaborada);
+                concatenarComidasElaborada(listaElaborada);
                 total += 1300;
                 break;
 
@@ -69,7 +69,7 @@ function algoElaborado() {
                 alert("INGRESASTE UNA OPCIÓN INCORRECTA");
                 break;
         }
-        listaElaborada = prompt("¿Quiere agregar algo más? 1-Ravioles con Tuco 2-Pastel de Papa 3-Napolitana con guarnición 4-Tarta de jamón y queso 0-Salir");
+        listaElaborada = prompt("¿Quiere agregar algo más? 1-Ravioles con Tuco 2-Pastel de Papa 3-Napolitana con guarnición 4-Tarta de jamón y queso 0-Volver al inicio");
     }
 }
 
@@ -81,7 +81,7 @@ function totalDeLaCompra() {
 //INICIO DEL PROGRAMA
 let nombreComida = "";
 let total = 0;
-let operacion = prompt("¿Que te gustaría comer hoy? Ingrese 1-si quiere algo rápido 2-si quiere algo elaborado 3-si quiere saber el total de su cuenta  0-si quiere salir");
+let operacion = prompt("¿Que te gustaría comer hoy? Ingrese 1-si quiere algo rápido 2-si quiere algo elaborado 3-si quiere saber el total de su cuenta  0-si quiere finalizar el pedido");
 
 while (operacion !== "0") {
     switch (operacion) {
@@ -105,7 +105,7 @@ while (operacion !== "0") {
     }
 
     //VOLVER A PEDIR UNA OPCIÓN AL USUARIO
-    operacion = prompt("¿Que te gustaría comer hoy? Ingrese 1-si quiere algo rápido 2-si quiere algo elaborado 3-si quiere saber el total de su cuenta  0-si quiere salir");
+    operacion = prompt("¿Que te gustaría comer hoy? Ingrese 1-si quiere algo rápido 2-si quiere algo elaborado 3-si quiere saber el total de su cuenta  0-si quiere finalizar el pedido");
 }
 
-alert("Gracias por su compra")
+alert("En unos minutos su pedido estara listo, gracias por su compra!");
